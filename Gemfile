@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
+ruby "2.1.2"
 
 gem 'rails', '4.0.0'
-gem 'pg'
+gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -15,6 +15,8 @@ gem 'slim'
 gem 'active_model_serializers'
 gem 'jquery-ui-rails'
 gem 'acts_as_list'
+
+gem 'rack-cors' 
 
 group :doc do
   gem 'sdoc', require: false

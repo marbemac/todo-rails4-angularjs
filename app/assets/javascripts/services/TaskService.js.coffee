@@ -1,7 +1,7 @@
 angular.module('todoApp').factory 'Task', ($resource, $http) ->
   class Task
     constructor: (taskListId, errorHandler) ->
-      @service = $resource('/api/task_lists/:task_list_id/tasks/:id',
+      @service = $resource('http://localhost:4010'+'/api/task_lists/:task_list_id/tasks/:id',
         {task_list_id: taskListId, id: '@id'},
         {update: {method: 'PATCH'}})
       @errorHandler = errorHandler

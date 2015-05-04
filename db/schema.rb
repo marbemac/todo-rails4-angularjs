@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20130904153446) do
     t.string   "name"
   end
 
-  add_index "task_lists", ["owner_id"], name: "index_task_lists_on_owner_id", using: :btree
+  add_index "task_lists", ["owner_id"], name: "index_task_lists_on_owner_id"
 
   create_table "tasks", force: true do |t|
     t.string   "description",                 null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20130904153446) do
     t.string   "authentication_token"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

@@ -1,6 +1,8 @@
 Todo::Application.routes.draw do
   devise_for :users  
 
+  # match "/*all" => "application#cors_preflight_check", :via => :options
+
   namespace :api, defaults: {format: :json} do
     devise_scope :user do
       resource :session, only: [:create, :destroy]

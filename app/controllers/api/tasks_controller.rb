@@ -1,5 +1,5 @@
 class Api::TasksController < Api::BaseController
-  before_action :check_owner
+  # before_action :check_owner
 
   def index
     render json: task_list.tasks
